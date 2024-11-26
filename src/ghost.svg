@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  <svg width="1000" height="600" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#000d88" />
+      <rect width="100%" height="13%" y="87%" fill="url(#earthGradient)" />
+
+      <style>
+        .rotated {
+          transform-origin: center;
+          transform: rotate(15deg);
+        }
+      </style>
+
+      <defs>
+        <radialGradient id="moonGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color: #ffffff; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #f0e68c; stop-opacity: 1" />
+        </radialGradient>
+        <radialGradient id="pumpkinGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" style="stop-color: #ff8c00; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #ff4500; stop-opacity: 1" />
+        </radialGradient>
+        <linearGradient id="earthGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#3e2b1f; stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#5c3b2b; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#7a4b34; stop-opacity:1" />
+        </linearGradient>
+        <path id="Path" d="M30,30 A80,30 0 1,0 29.9,30" fill="transparent" stroke="none"/>
+      </defs>
+
+      <circle id="Ksiezyc" cx="900" cy="100" r="50" fill="url(#moonGradient)">
+        <animate attributeName="r" from="45" to="55" dur="3s" repeatCount="indefinite" />
+      </circle>
+
+      <g desc="Dynia" fill="url(#pumpkinGradient)" >
+        <polygon points="490,450 493,420 513,420 510,450" fill="#2f8314"></polygon>
+        <ellipse cx="470" cy="500" rx="50" ry="60"/>
+        <ellipse cx="530" cy="500" rx="50" ry="60"/>
+        <ellipse cx="500" cy="500" rx="50" ry="60"/>
+        <g desc="Twarz_Dyni" fill="#000000">
+          <animate attributeName="fill" values="#4e3a21; #ff5b22; #ffa622; #ffe822; #ffa622; #ff5b22; #4e3a21" dur="3s" repeatCount="indefinite"/>
+          <polygon points="475,470 490,485 470,485"></polygon>
+          <polygon points="525,470 510,485 530,485"></polygon>
+          <polygon points="500,490 490,502 510,502"></polygon>
+          <path d="M470,515 A40,40 0 0,0 530,515"/>
+        </g>
+      </g>
+
+      <g desc="Duch" fill="#ffffff" class="rotated">
+        <ellipse cx="250" cy="250" rx="60" ry="120"/>
+        <ellipse cx="200" cy="310" rx="30" ry="60"/>
+        <ellipse cx="300" cy="310" rx="30" ry="60"/>
+        <path d="M200,185 A400,400 0 0,0 171,300 L250,250 Z"/>
+        <path d="M329,300 A400,400 0 0,0 300,185 L250,250 Z"/>
+        <ellipse cx="230" cy="220" rx="10" ry="20" fill="#000000"/>
+        <ellipse cx="270" cy="220" rx="10" ry="20" fill="#000000"/>
+        <animateMotion dur="4s" repeatCount="indefinite">
+          <mpath href="#Path"/>
+        </animateMotion>
+      </g>
+    </svg>
+  </body>
+</html>
